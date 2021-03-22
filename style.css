@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    width: 200px;
+    margin: 20px;
+}
+
+.input_section {
+    text-align: center;
+    border-radius: 10px;
+}
+
+.input_section input,
+.input_section button {
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.list {
+    margin-top: 20px;
+    width: 100%;
+    background-color: lightgray;
+    padding: 20px;
+}
+
+.list ul {
+    list-style: none;
+}
+
+.list ul li {
+    padding: 20px 0;
+    border-bottom: 1px solid gray;
+}
+
+.list ul li i {
+    float: right;
+}
