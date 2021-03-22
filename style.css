@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body {
+    font-size: 14px;
+    font-family: 'Inconsolata', monospace;
+}
+
 .container {
     width: 80%;
     margin: 0 auto;
@@ -26,11 +31,12 @@
 
 .input_section input,
 .input_section button {
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 10px;
 }
 
 .list {
+    border-radius: 10px;
     margin-top: 20px;
     width: 100%;
     background-color: lightgray;
@@ -42,10 +48,19 @@
 }
 
 .list ul li {
-    padding: 20px 0;
+    padding: 10px 0;
     border-bottom: 1px solid gray;
 }
 
+.list ul li:hover {
+    border-radius: 5px;
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    background-color: white;
+    cursor: pointer;
+}
+
 .list ul li i {
+    padding-right: 5px;
     float: right;
+    color: black;
 }

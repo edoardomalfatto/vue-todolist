@@ -16,6 +16,7 @@ var app = new Vue({
     el: '#root',
 
     data: {
+        newTask: "",
         doListArray: [
             "da fare 1",
             "da fare 2",
@@ -27,6 +28,13 @@ var app = new Vue({
         removeTask: function(index) {
             this.doListArray.splice(index, 1);
             console.log(this.doListArray);
+        },
+        addTask: function() {
+            console.log(this.newTask);
+            if (this.newTask != "") {
+                this.doListArray.push(this.newTask);
+                this.newTask = "";
+            }
         }
     }
 })

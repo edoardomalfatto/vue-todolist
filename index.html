@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -17,13 +18,14 @@
             <img src="https://www.boolean.careers/images/misc/logo.png" alt="Logo Boolean">
         </div>
         <div class="input_section">
-            <input type="text">
-            <button>Aggiungi</button>
+            <input v-on:keyup.enter="addTask" placeholder="Cosa vuoi fare di bello?" v-model="newTask" type="text">
+            <button @click="addTask">Aggiungi</button>
         </div>
         <div class="list">
-            <ul>
+            <ul v-if="(doListArray.length != 0)">
                 <li v-for="(task,index) in doListArray">{{task}} <a @click="removeTask(index)" href="#"><i class="fas fa-times"></i></a></li>
             </ul>
+            <h2 v-else>Aggiungi una nuova task e liberati dal caos della giornata!</h2>
         </div>
 
     </div>
